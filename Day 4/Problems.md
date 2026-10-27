@@ -100,3 +100,28 @@ number of auxiliary integer variables. Zero takes constant time. The arithmetic
 and storage costs of very large integers depend on their bit lengths.
 
 [Solution](integer_square_root.py) · [Tests](test_integer_square_root.py)
+
+## 5. Generate a Fibonacci sequence
+
+Write `fibonacci_sequence(count)` to return the first `count` Fibonacci values
+as a new list, starting at `0, 1`. Each later value is the sum of the previous two.
+Return an empty list for zero and raise `ValueError` for a negative count. Use an
+iterative solution rather than recursive recomputation.
+
+| Input | Expected output |
+|---|---|
+| `0` | `[]` |
+| `1` | `[0]` |
+| `2` | `[0, 1]` |
+| `7` | `[0, 1, 1, 2, 3, 5, 8]` |
+| `-1` | `ValueError` |
+
+**Approach:** Keep the current and next values. Append the current value, then
+advance both variables together. A loop makes the requested sequence length
+explicit and avoids recalculating earlier values.
+
+**Complexity:** O(count) additions and O(count) output integer slots, plus a
+constant number of working integer variables. Fibonacci integers grow in size:
+the returned values collectively occupy O(count squared) bits for large counts.
+
+[Solution](fibonacci_sequence.py) · [Tests](test_fibonacci_sequence.py)
