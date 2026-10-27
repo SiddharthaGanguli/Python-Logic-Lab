@@ -27,3 +27,25 @@ case and a constant number of auxiliary integer variables. Trial division is
 intended for practice with modest inputs, not cryptographic-size primality tests.
 
 [Solution](prime_number.py) · [Tests](test_prime_number.py)
+
+## 2. Find the greatest common divisor
+
+Write `gcd(first, second)` using Euclid's algorithm. Accept positive, negative,
+and zero inputs, and return a nonnegative result. Define `gcd(0, 0)` as `0`.
+Do not use `math.gcd` in the solution.
+
+| Input | Expected output |
+|---|---|
+| `48, 18` | `6` |
+| `-24, 36` | `12` |
+| `35, 64` | `1` |
+| `0, -9` | `9` |
+| `0, 0` | `0` |
+
+**Approach:** Work with the magnitudes. Repeatedly replace the pair `(a, b)`
+with `(b, a % b)` until the second value is zero. The first value is then the GCD.
+
+**Complexity:** O(log(M + 1)) remainder operations, where `M` is the larger
+input magnitude, and a constant number of auxiliary integer variables.
+
+[Solution](greatest_common_divisor.py) · [Tests](test_greatest_common_divisor.py)
