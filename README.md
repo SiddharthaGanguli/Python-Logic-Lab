@@ -9,13 +9,14 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **1**. Each includes requirements, expected examples,
+Additional exercises: **2**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
 | Day | Topic | Question |
 |---|---|---|
 | 2 | Lists and searching | [Rotate a list to the right](Day%202/Problems.md#1-rotate-a-list-to-the-right) |
+| 2 | Lists and searching | [Merge two sorted lists](Day%202/Problems.md#2-merge-two-sorted-lists) |
 
 ## Run a solution
 
