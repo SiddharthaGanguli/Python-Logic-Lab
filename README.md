@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **4**. Each includes requirements, expected examples,
+Additional exercises: **5**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -19,6 +19,7 @@ they do not impose a daily schedule.
 | 2 | Lists and searching | [Merge two sorted lists](Day%202/Problems.md#2-merge-two-sorted-lists) |
 | 2 | Lists and searching | [Find the missing number](Day%202/Problems.md#3-find-the-missing-number) |
 | 2 | Lists and searching | [Find two indices with a target sum](Day%202/Problems.md#4-find-two-indices-with-a-target-sum) |
+| 2 | Lists and searching | [Find the maximum contiguous subarray sum](Day%202/Problems.md#5-find-the-maximum-contiguous-subarray-sum) |
 
 ## Run a solution
 

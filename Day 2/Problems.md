@@ -106,3 +106,30 @@ Write `two_sum(numbers, target)` to return the indices of two distinct elements 
 Scan from left to right and store the earliest index of each previously seen value. Look up `target - number` before inserting the current number, so an element cannot pair with itself. Expected time is O(n) with O(n) auxiliary space for the dictionary.
 
 [Solution](two_sum.py) · [Tests](test_two_sum.py)
+
+## 5. Find the maximum contiguous subarray sum
+
+Write `maximum_subarray_sum(numbers)` to return the largest sum of any nonempty contiguous part of a list of integers.
+
+### Requirements
+
+- A subarray must contain consecutive elements and at least one element.
+- Return `None` for an empty list.
+- Handle all-negative input correctly; choosing an empty subarray with sum 0 is not allowed.
+- Return only the sum, leave the input unchanged, and aim for one pass.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `maximum_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4])` | `6` |
+| `maximum_subarray_sum([-8, -3, -6, -2, -5])` | `-2` |
+| `maximum_subarray_sum([1, 2, 3])` | `6` |
+| `maximum_subarray_sum([0, 0])` | `0` |
+| `maximum_subarray_sum([])` | `None` |
+
+### Approach and complexity
+
+Track the best sum ending at the current element. Either extend the preceding subarray or start a new one at the current value, then update the best sum seen overall. Initialize from the first element so negative-only lists work. Time is O(n), with O(1) auxiliary space.
+
+[Solution](maximum_subarray.py) · [Tests](test_maximum_subarray.py)
