@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **13**. Each includes requirements, expected examples,
+Additional exercises: **14**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -28,6 +28,7 @@ they do not impose a daily schedule.
 | 4 | Number logic | [Check whether a number is prime](Day%204/Problems.md#1-check-whether-a-number-is-prime) |
 | 4 | Number logic | [Find the greatest common divisor](Day%204/Problems.md#2-find-the-greatest-common-divisor) |
 | 4 | Number logic | [Convert a decimal integer to binary](Day%204/Problems.md#3-convert-a-decimal-integer-to-binary) |
+| 4 | Number logic | [Find the integer square root](Day%204/Problems.md#4-find-the-integer-square-root) |
 
 ## Run a solution
 

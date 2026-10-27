@@ -73,3 +73,30 @@ of output bits. The digit list uses O(b) auxiliary space and the result uses O(b
 characters. Big-integer division itself is not a constant-time machine operation.
 
 [Solution](decimal_to_binary.py) · [Tests](test_decimal_to_binary.py)
+
+## 4. Find the integer square root
+
+Write `integer_square_root(number)` to return the largest integer `r` satisfying
+`r * r <= number`. Use binary search and integer arithmetic, without `sqrt()` or
+`math.isqrt()` in the solution. Accept zero and positive integers; raise
+`ValueError` for negative integers.
+
+| Input | Expected output |
+|---|---|
+| `0` | `0` |
+| `1` | `1` |
+| `8` | `2` |
+| `16` | `4` |
+| `26` | `5` |
+| `-1` | `ValueError` |
+
+**Approach:** Search the integer interval from 0 to `number`. If the middle
+value's square fits, record it and search larger candidates; otherwise search
+smaller candidates. The saved candidate is the floor square root when the search
+interval becomes empty.
+
+**Complexity:** O(log(n + 1)) search iterations for positive `n`, with a constant
+number of auxiliary integer variables. Zero takes constant time. The arithmetic
+and storage costs of very large integers depend on their bit lengths.
+
+[Solution](integer_square_root.py) · [Tests](test_integer_square_root.py)
