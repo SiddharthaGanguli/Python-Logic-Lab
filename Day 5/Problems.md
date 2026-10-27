@@ -118,3 +118,34 @@ columns, the work is O(r + r*c): validation still visits rows when c is zero.
 The output occupies O(r*c) space, with O(1) auxiliary space beyond it.
 
 [Solution](transpose_matrix.py) · [Tests](test_transpose_matrix.py)
+
+## 5. Count subarrays with a target sum
+
+Write `count_target_subarrays(numbers, target)` to count contiguous, nonempty
+subarrays whose values add up to `target`.
+
+### Requirements
+
+- Inputs and target are integers; negative numbers and zeros are valid.
+- Count overlapping matches separately, including matches starting at index zero.
+- Return `0` for an empty list and preserve the input.
+- Aim for a single traversal instead of checking every possible subarray.
+
+### Examples
+
+| Numbers | Target | Expected output |
+|---|---|---:|
+| `[1, 2, 1, 2]` | `3` | `3` |
+| `[1, -1, 0]` | `0` | `3` |
+| `[0, 0, 0]` | `0` | `6` |
+| `[]` | `0` | `0` |
+
+### Approach and complexity
+
+Track the running prefix sum and how often each earlier sum occurred. A previous
+sum equal to `current_sum - target` starts a matching subarray. Seed the counts
+with `{0: 1}` to include matches beginning at the first element, and query before
+recording the current sum so empty subarrays are excluded. Expected O(n) time
+and O(n) auxiliary space under the stated arithmetic and hashing assumptions.
+
+[Solution](count_target_subarrays.py) · [Tests](test_count_target_subarrays.py)
