@@ -63,3 +63,33 @@ uses every count. For input lengths `n` and `m`, expected time is O(n + m) and e
 space is O(n + m), including both normalized strings and the frequency dictionary.
 
 [Solution](anagram_words.py) · [Tests](test_anagram_words.py)
+
+## 3. Find the first unique character
+
+Write `first_unique_character(text)` to return the first character appearing exactly
+once in a string. Return the character itself, not its index.
+
+### Requirements
+
+- Matching is case-sensitive; `"a"` and `"A"` are different characters.
+- Spaces, punctuation, and Unicode code points count like any other character.
+- Return `None` for empty input or when every character repeats.
+- Preserve original order when choosing between multiple unique characters.
+
+### Examples
+
+| Input | Output |
+|---|---|
+| `"swiss"` | `"w"` |
+| `"aA"` | `"a"` |
+| `"aa bb"` | `" "` |
+| `"aabb"` | `None` |
+| `""` | `None` |
+
+### Approach and complexity
+
+Count frequencies in one pass. Scan the original string again and return the first
+character with count one. For `n` characters and `u` distinct characters, expected
+time is O(n) and extra space is O(u).
+
+[Solution](first_unique_character.py) · [Tests](test_first_unique_character.py)
