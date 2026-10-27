@@ -122,3 +122,34 @@ and emit the final run after the scan. For `n` characters and `r` runs, time is 
 The returned list takes O(r) space; auxiliary space excluding that output is O(1).
 
 [Solution](run_length_encoding.py) · [Tests](test_run_length_encoding.py)
+
+## 5. Find the longest common prefix
+
+Write `longest_common_prefix(words)` to find the longest starting substring shared
+by every string in a list.
+
+### Requirements
+
+- Compare characters exactly: case, whitespace, and Unicode code points are significant.
+- Return `""` for an empty list, an empty member, or no shared starting character.
+- For one string, return that complete string.
+- Do not sort or modify the input list.
+
+### Examples
+
+| Input | Output |
+|---|---|
+| `["flower", "flow", "flight"]` | `"fl"` |
+| `["carpet", "car", "cart"]` | `"car"` |
+| `["Apple", "apple"]` | `""` |
+| `["abc", ""]` | `""` |
+| `[]` | `""` |
+
+### Approach and complexity
+
+Start with the first string's length and shorten the possible prefix while
+comparing each string against the first. Stop when the prefix becomes empty. For
+`k` strings containing `S` characters in total, time is O(k + S). Auxiliary space
+is O(1); the returned prefix requires up to O(p) space for prefix length `p`.
+
+[Solution](longest_common_prefix.py) · [Tests](test_longest_common_prefix.py)
