@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **15**. Each includes requirements, expected examples,
+Additional exercises: **16**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -30,6 +30,7 @@ they do not impose a daily schedule.
 | 4 | Number logic | [Convert a decimal integer to binary](Day%204/Problems.md#3-convert-a-decimal-integer-to-binary) |
 | 4 | Number logic | [Find the integer square root](Day%204/Problems.md#4-find-the-integer-square-root) |
 | 4 | Number logic | [Generate a Fibonacci sequence](Day%204/Problems.md#5-generate-a-fibonacci-sequence) |
+| 5 | Dictionaries, stacks, and structured data | [Count repeated items](Day%205/Problems.md#1-count-repeated-items) |
 
 ## Run a solution
 
@@ -51,6 +52,7 @@ Run each day's suite from the repository root:
 python -B -m unittest discover -s "Day 2" -v
 python -B -m unittest discover -s "Day 3" -v
 python -B -m unittest discover -s "Day 4" -v
+python -B -m unittest discover -s "Day 5" -v
 ```
 
 These suites cover the additional exercises listed above. Tests check boundary
