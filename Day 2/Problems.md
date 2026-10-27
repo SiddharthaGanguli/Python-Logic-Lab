@@ -53,3 +53,29 @@ Write `merge_sorted_lists(left, right)` to combine two lists into a new sorted l
 Keep one index for each input. Append the smaller current value and advance its index. When one input is exhausted, append the remaining values from the other. For input lengths m and n, time is O(m + n) and auxiliary space is O(1), excluding the O(m + n) returned list.
 
 [Solution](merge_sorted_lists.py) · [Tests](test_merge_sorted_lists.py)
+
+## 3. Find the missing number
+
+A list of length n contains distinct integers from 0 through n, inclusive, with exactly one value missing. Write `missing_number(numbers)` to return that value.
+
+### Requirements
+
+- The list can be in any order and must remain unchanged.
+- Assume the values are distinct and within the stated range; input validation is not part of this exercise.
+- Either endpoint, 0 or n, may be missing.
+- For an empty list, the only missing value is 0.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `missing_number([3, 0, 1])` | `2` |
+| `missing_number([1, 2, 3])` | `0` |
+| `missing_number([2, 0, 1])` | `3` |
+| `missing_number([])` | `0` |
+
+### Approach and complexity
+
+The sum of the complete range is `n * (n + 1) // 2`. Subtract each observed number; the remaining total is the missing value. Time is O(n), with O(1) auxiliary space under the usual unit-cost integer model.
+
+[Solution](missing_number.py) · [Tests](test_missing_number.py)
