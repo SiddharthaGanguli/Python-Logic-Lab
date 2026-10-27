@@ -31,3 +31,35 @@ comparison immediately. For an input of length `n`, normalization and comparison
 take O(n) time and O(n) extra space, including the cleaned string.
 
 [Solution](palindrome_text.py) · [Tests](test_palindrome_text.py)
+
+## 2. Compare words as anagrams
+
+Write `are_anagrams(first, second)` to check whether two strings contain the same
+characters with the same frequencies after ignoring case and whitespace. Use
+character counts rather than sorting the inputs.
+
+### Requirements
+
+- Case-fold each string and remove characters for which `str.isspace()` is true.
+- Punctuation and digits remain significant: `"ab!"` and `"ba"` are not anagrams.
+- Empty and whitespace-only strings are anagrams of each other.
+- Apply no additional Unicode normalization; `"é"` and `"e\u0301"` remain different.
+- Accept two strings and leave the original values unchanged.
+
+### Examples
+
+| First input | Second input | Output |
+|---|---|---|
+| `"Dormitory"` | `"Dirty room"` | `True` |
+| `"aab"` | `"abb"` | `False` |
+| `"ab!"` | `"ba"` | `False` |
+| `"Straße"` | `"strasse"` | `True` |
+
+### Approach and complexity
+
+Compare normalized lengths, count characters in the first string, and consume
+those counts while scanning the second. Equal lengths ensure successful consumption
+uses every count. For input lengths `n` and `m`, expected time is O(n + m) and extra
+space is O(n + m), including both normalized strings and the frequency dictionary.
+
+[Solution](anagram_words.py) · [Tests](test_anagram_words.py)
