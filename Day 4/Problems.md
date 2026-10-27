@@ -49,3 +49,27 @@ with `(b, a % b)` until the second value is zero. The first value is then the GC
 input magnitude, and a constant number of auxiliary integer variables.
 
 [Solution](greatest_common_divisor.py) · [Tests](test_greatest_common_divisor.py)
+
+## 3. Convert a decimal integer to binary
+
+Write `decimal_to_binary(number)` to return a nonnegative integer's binary digits
+as a string. Do not use `bin()`, `format()`, or binary format specifiers in the
+solution. The result has no `0b` prefix and no extra leading zeroes. Return `"0"`
+for zero and raise `ValueError` for a negative integer.
+
+| Input | Expected output |
+|---|---|
+| `0` | `"0"` |
+| `1` | `"1"` |
+| `10` | `"1010"` |
+| `42` | `"101010"` |
+| `-1` | `ValueError` |
+
+**Approach:** Repeatedly divide by 2 and collect the remainders. They arrive
+least-significant digit first, so reverse them before joining them into a string.
+
+**Complexity:** O(b) division steps and character work, where `b` is the number
+of output bits. The digit list uses O(b) auxiliary space and the result uses O(b)
+characters. Big-integer division itself is not a constant-time machine operation.
+
+[Solution](decimal_to_binary.py) · [Tests](test_decimal_to_binary.py)
