@@ -62,3 +62,30 @@ last opening bracket. At the end, the stack must be empty. O(n) time and O(n)
 auxiliary space in the worst case.
 
 [Solution](balanced_brackets.py) · [Tests](test_balanced_brackets.py)
+
+## 3. Find a unique intersection
+
+Write `unique_intersection(first, second)` to return each integer shared by two
+lists exactly once, in the order it first appears in `first`.
+
+### Requirements
+
+- Inputs can be unsorted and contain duplicates or negative integers.
+- Do not sort or mutate either input.
+- Return a new list; if either input is empty or there are no matches, return `[]`.
+
+### Examples
+
+| First list | Second list | Expected output |
+|---|---|---|
+| `[3, 1, 3, 2, 4]` | `[2, 3, 3]` | `[3, 2]` |
+| `[-1, 0, -1, 2, 0]` | `[0, -1, -1]` | `[-1, 0]` |
+| `[1]` | `[2]` | `[]` |
+
+### Approach and complexity
+
+Build a membership set from `second` and track values already emitted. Walk
+`first` in its original order. Expected O(n + m) time for the two input lengths,
+O(m + k) auxiliary space, and O(k) output space for k shared distinct values.
+
+[Solution](unique_intersection.py) · [Tests](test_unique_intersection.py)
