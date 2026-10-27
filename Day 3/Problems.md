@@ -93,3 +93,32 @@ character with count one. For `n` characters and `u` distinct characters, expect
 time is O(n) and extra space is O(u).
 
 [Solution](first_unique_character.py) · [Tests](test_first_unique_character.py)
+
+## 4. Encode consecutive character runs
+
+Write `encode_runs(text)` to represent each maximal run of consecutive equal
+characters as a `(character, count)` tuple, in its original order.
+
+### Requirements
+
+- Return a list of tuples, rather than a string such as `"a3b2"`, so digit characters remain unambiguous.
+- Count characters case-sensitively without filtering spaces, digits, or punctuation.
+- Keep separate runs separate, even when the same character appears again later.
+- Return an empty list for an empty string. Every returned count must be positive.
+
+### Examples
+
+| Input | Output |
+|---|---|
+| `"aaabbcaa"` | `[("a", 3), ("b", 2), ("c", 1), ("a", 2)]` |
+| `"11122"` | `[("1", 3), ("2", 2)]` |
+| `"Aa"` | `[("A", 1), ("a", 1)]` |
+| `""` | `[]` |
+
+### Approach and complexity
+
+Track the current character and count. Emit a tuple when the character changes,
+and emit the final run after the scan. For `n` characters and `r` runs, time is O(n).
+The returned list takes O(r) space; auxiliary space excluding that output is O(1).
+
+[Solution](run_length_encoding.py) · [Tests](test_run_length_encoding.py)

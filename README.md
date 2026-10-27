@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **8**. Each includes requirements, expected examples,
+Additional exercises: **9**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -23,6 +23,7 @@ they do not impose a daily schedule.
 | 3 | String reasoning | [Check a normalized palindrome](Day%203/Problems.md#1-check-a-normalized-palindrome) |
 | 3 | String reasoning | [Compare words as anagrams](Day%203/Problems.md#2-compare-words-as-anagrams) |
 | 3 | String reasoning | [Find the first unique character](Day%203/Problems.md#3-find-the-first-unique-character) |
+| 3 | String reasoning | [Encode consecutive character runs](Day%203/Problems.md#4-encode-consecutive-character-runs) |
 
 ## Run a solution
 
