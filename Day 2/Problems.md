@@ -79,3 +79,30 @@ A list of length n contains distinct integers from 0 through n, inclusive, with 
 The sum of the complete range is `n * (n + 1) // 2`. Subtract each observed number; the remaining total is the missing value. Time is O(n), with O(1) auxiliary space under the usual unit-cost integer model.
 
 [Solution](missing_number.py) · [Tests](test_missing_number.py)
+
+## 4. Find two indices with a target sum
+
+Write `two_sum(numbers, target)` to return the indices of two distinct elements whose values add up to `target`.
+
+### Requirements
+
+- Inputs are a list of integers and an integer target; negative numbers and duplicate values are allowed.
+- Return a tuple `(first, second)` where `first < second`, or `None` if no pair exists.
+- If several pairs exist, choose the smallest `second` index, then the smallest `first` index.
+- Never use one element twice and do not modify the input.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `two_sum([2, 7, 11, 15], 9)` | `(0, 1)` |
+| `two_sum([3, 3], 6)` | `(0, 1)` |
+| `two_sum([1, 1, 4, 2, 3], 5)` | `(0, 2)` |
+| `two_sum([1, 2, 3, 4], 5)` | `(1, 2)` |
+| `two_sum([3], 6)` | `None` |
+
+### Approach and complexity
+
+Scan from left to right and store the earliest index of each previously seen value. Look up `target - number` before inserting the current number, so an element cannot pair with itself. Expected time is O(n) with O(n) auxiliary space for the dictionary.
+
+[Solution](two_sum.py) · [Tests](test_two_sum.py)
