@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **5**. Each includes requirements, expected examples,
+Additional exercises: **6**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -20,6 +20,7 @@ they do not impose a daily schedule.
 | 2 | Lists and searching | [Find the missing number](Day%202/Problems.md#3-find-the-missing-number) |
 | 2 | Lists and searching | [Find two indices with a target sum](Day%202/Problems.md#4-find-two-indices-with-a-target-sum) |
 | 2 | Lists and searching | [Find the maximum contiguous subarray sum](Day%202/Problems.md#5-find-the-maximum-contiguous-subarray-sum) |
+| 3 | String reasoning | [Check a normalized palindrome](Day%203/Problems.md#1-check-a-normalized-palindrome) |
 
 ## Run a solution
 
@@ -39,6 +40,7 @@ Run each day's suite from the repository root:
 
 ```sh
 python -B -m unittest discover -s "Day 2" -v
+python -B -m unittest discover -s "Day 3" -v
 ```
 
 These suites cover the additional exercises listed above. Tests check boundary
