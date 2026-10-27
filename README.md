@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **10**. Each includes requirements, expected examples,
+Additional exercises: **11**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -25,6 +25,7 @@ they do not impose a daily schedule.
 | 3 | String reasoning | [Find the first unique character](Day%203/Problems.md#3-find-the-first-unique-character) |
 | 3 | String reasoning | [Encode consecutive character runs](Day%203/Problems.md#4-encode-consecutive-character-runs) |
 | 3 | String reasoning | [Find the longest common prefix](Day%203/Problems.md#5-find-the-longest-common-prefix) |
+| 4 | Number logic | [Check whether a number is prime](Day%204/Problems.md#1-check-whether-a-number-is-prime) |
 
 ## Run a solution
 
@@ -45,6 +46,7 @@ Run each day's suite from the repository root:
 ```sh
 python -B -m unittest discover -s "Day 2" -v
 python -B -m unittest discover -s "Day 3" -v
+python -B -m unittest discover -s "Day 4" -v
 ```
 
 These suites cover the additional exercises listed above. Tests check boundary
