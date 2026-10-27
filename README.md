@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **16**. Each includes requirements, expected examples,
+Additional exercises: **17**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -31,6 +31,7 @@ they do not impose a daily schedule.
 | 4 | Number logic | [Find the integer square root](Day%204/Problems.md#4-find-the-integer-square-root) |
 | 4 | Number logic | [Generate a Fibonacci sequence](Day%204/Problems.md#5-generate-a-fibonacci-sequence) |
 | 5 | Dictionaries, stacks, and structured data | [Count repeated items](Day%205/Problems.md#1-count-repeated-items) |
+| 5 | Dictionaries, stacks, and structured data | [Check balanced brackets](Day%205/Problems.md#2-check-balanced-brackets) |
 
 ## Run a solution
 

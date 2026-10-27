@@ -32,3 +32,33 @@ as constant cost; hashing long strings also depends on their lengths. O(1)
 auxiliary space beyond the result under this model.
 
 [Solution](count_frequencies.py) · [Tests](test_count_frequencies.py)
+
+## 2. Check balanced brackets
+
+Write `has_balanced_brackets(text)` to check whether `()`, `[]`, and `{}` close in
+the correct nesting order.
+
+### Requirements
+
+- Ignore all other characters; empty text is balanced.
+- A closing bracket must match the most recent unclosed opening bracket.
+- Reject unmatched opening or closing brackets and crossed pairs such as `([)]`.
+- This is a text exercise, not a Python parser: brackets inside quotes still count.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `"{[()]}()[]"` | `True` |
+| `"items[(2 + 3)]"` | `True` |
+| `"([)]"` | `False` |
+| `"("` | `False` |
+| `""` | `True` |
+
+### Approach and complexity
+
+Push opening brackets onto a stack. For a closing bracket, pop and compare the
+last opening bracket. At the end, the stack must be empty. O(n) time and O(n)
+auxiliary space in the worst case.
+
+[Solution](balanced_brackets.py) · [Tests](test_balanced_brackets.py)
