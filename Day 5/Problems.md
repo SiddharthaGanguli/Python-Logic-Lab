@@ -89,3 +89,32 @@ Build a membership set from `second` and track values already emitted. Walk
 O(m + k) auxiliary space, and O(k) output space for k shared distinct values.
 
 [Solution](unique_intersection.py) · [Tests](test_unique_intersection.py)
+
+## 4. Transpose a rectangular matrix
+
+Write `transpose_matrix(matrix)` to return a new matrix with rows and columns swapped.
+
+### Requirements
+
+- The input is a list of integer lists; all rows must have equal lengths.
+- Raise `ValueError` for unequal row lengths, including an empty row mixed with a nonempty row.
+- Return `[]` for `[]` or for a rectangular matrix with zero columns, such as `[[], []]`.
+- Preserve the input and create independent output rows.
+- Use indexing and loops or comprehensions rather than `zip()` for the core solution.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `[[1, 2, 3], [4, 5, 6]]` | `[[1, 4], [2, 5], [3, 6]]` |
+| `[[1], [2]]` | `[[1, 2]]` |
+| `[[], []]` | `[]` |
+| `[[1], [2, 3]]` | `ValueError` |
+
+### Approach and complexity
+
+Check row lengths, then collect each column into a new row. For r rows and c
+columns, the work is O(r + r*c): validation still visits rows when c is zero.
+The output occupies O(r*c) space, with O(1) auxiliary space beyond it.
+
+[Solution](transpose_matrix.py) · [Tests](test_transpose_matrix.py)
