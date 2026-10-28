@@ -63,3 +63,39 @@ negative-only input. Each step subtracts the outgoing value and adds the incomin
 value. For `n` numbers, time is O(n) and extra space is O(1).
 
 [Solution](fixed_window_sum.py) · [Tests](test_fixed_window_sum.py)
+
+## 3. Make an amount with the fewest coins
+
+Write `minimum_coin_change(coins, amount)` to find the minimum number of coins
+needed to make an exact amount. Each denomination may be used any number of times.
+
+### Requirements
+
+- `coins` contains integer denominations and `amount` is an integer.
+- Reject any coin value `<= 0` or an amount `< 0` with `ValueError`.
+- Validate denominations even when `amount == 0`. A valid zero amount returns `0`.
+- Return `-1` when the amount cannot be formed. Duplicate denominations are allowed.
+- An empty coin list is valid: it makes only amount zero. Do not modify the list.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `minimum_coin_change([1, 3, 4], 6)` | `2` |
+| `minimum_coin_change([2, 4], 7)` | `-1` |
+| `minimum_coin_change([2, 3, 3], 6)` | `2` |
+| `minimum_coin_change([], 0)` | `0` |
+| `minimum_coin_change([], 4)` | `-1` |
+| `minimum_coin_change([0, 1], 0)` | raises `ValueError` |
+
+### Approach and complexity
+
+Store the fewest coins needed for every subtotal from zero through the target.
+For a subtotal, try each denomination as its last coin. An unreachable marker
+distinguishes impossible subtotals from valid counts. A largest-coin-first greedy
+strategy fails for `[1, 3, 4]` and amount `6`: two threes beat four plus two ones.
+
+For `k` denominations and amount `A`, a nonempty coin list takes O(k + A*k) time,
+including validation, and O(A + 1) extra space. Empty coin lists return directly.
+
+[Solution](minimum_coin_change.py) · [Tests](test_minimum_coin_change.py)
