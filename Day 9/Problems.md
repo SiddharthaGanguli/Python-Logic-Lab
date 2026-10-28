@@ -99,3 +99,33 @@ and remove repeated edges consistently. Time is O(E + V*log(V + 1)), with O(V)
 auxiliary space and O(V) output space.
 
 [Solution](topological_sort.py) · [Tests](test_topological_sort.py)
+
+## 4. Check whether a graph is bipartite
+
+Write `is_bipartite(graph)` to decide whether every vertex can receive one of two
+colors so that the endpoints of every edge have different colors.
+
+### Requirements
+
+- Treat every listed edge as undirected, even if the reverse direction is absent.
+- Include neighbor-only vertices, isolated vertices, and every connected component.
+- Empty graphs are bipartite. A self-loop is not; duplicate edges do not change the result.
+- Return a Boolean and preserve the input dictionary and lists.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `{"a": ["b", "d"], "b": ["c"], "c": ["d"]}` | `True` |
+| `{"a": ["b", "c"], "b": ["c"]}` | `False` |
+| `{"a": ["a"]}` | `False` |
+| `{}` | `True` |
+
+### Approach and complexity
+
+Build undirected adjacency sets, then traverse each uncolored component. Assign
+each newly reached vertex the opposite color from its predecessor. An edge whose
+endpoints already have the same color proves the graph is not bipartite. Expected
+time and auxiliary space are O(V + E), including the normalized adjacency sets.
+
+[Solution](bipartite_graph.py) · [Tests](test_bipartite_graph.py)

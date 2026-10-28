@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **37**. Each includes requirements, expected examples,
+Additional exercises: **38**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -52,6 +52,7 @@ they do not impose a daily schedule.
 | 9 | Graphs and grid traversal | [Find a shortest route in an unweighted graph](Day%209/Problems.md#1-find-a-shortest-route-in-an-unweighted-graph) |
 | 9 | Graphs and grid traversal | [Count islands in a binary grid](Day%209/Problems.md#2-count-islands-in-a-binary-grid) |
 | 9 | Graphs and grid traversal | [Order tasks by their dependencies](Day%209/Problems.md#3-order-tasks-by-their-dependencies) |
+| 9 | Graphs and grid traversal | [Check whether a graph is bipartite](Day%209/Problems.md#4-check-whether-a-graph-is-bipartite) |
 
 ## Run a solution
 
