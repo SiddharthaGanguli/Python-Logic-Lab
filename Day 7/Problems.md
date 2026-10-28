@@ -74,3 +74,41 @@ For `n` values, time is O(log(n + 1)) and auxiliary space is O(1). The algorithm
 uses indices only and makes no copy. Empty input takes constant time.
 
 [Solution](search_rotated.py) · [Tests](test_search_rotated.py)
+
+## 3. Merge overlapping intervals
+
+Write `merge_intervals(intervals)` to combine overlapping or touching closed
+intervals. Return a new list of `(start, end)` tuples, sorted by start, covering
+exactly the same points as the input.
+
+### Requirements
+
+- Input is a list of two-integer tuples `(start, end)` in any order.
+- Raise `ValueError` if an interval has `start > end`.
+- Closed intervals sharing an endpoint merge: `(1, 3)` and `(3, 5)` become `(1, 5)`.
+- Point intervals such as `(2, 2)` are valid. An empty list returns `[]`.
+- Keep gaps: `(1, 2)` and `(3, 4)` remain separate despite integer endpoints.
+- Preserve the input and return new interval tuples.
+
+### Examples
+
+| Input | Output |
+|---|---|
+| `[(8, 10), (1, 3), (2, 6), (10, 12)]` | `[(1, 6), (8, 12)]` |
+| `[(1, 3), (3, 5)]` | `[(1, 5)]` |
+| `[(1, 8), (2, 3), (8, 8)]` | `[(1, 8)]` |
+| `[(2, 2), (1, 1)]` | `[(1, 1), (2, 2)]` |
+| `[(3, 1)]` | `ValueError` |
+
+### Approach and complexity
+
+Validate endpoints and sort a copy of the input. Track the current interval and
+extend its end when the next start touches or overlaps it. When a gap appears,
+emit the current interval and start another. Emit the final interval after the
+scan.
+
+For `n` intervals, sorting takes O(n log n) time and the scan takes O(n).
+The sorted copy and sorting workspace use O(n) auxiliary space; the output uses
+O(k) space for `k` merged intervals. Empty input returns in constant time.
+
+[Solution](merge_intervals.py) · [Tests](test_merge_intervals.py)
