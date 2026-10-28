@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **25**. Each includes requirements, expected examples,
+Additional exercises: **26**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -40,6 +40,7 @@ they do not impose a daily schedule.
 | 6 | Recursion and backtracking | [Generate unique permutations](Day%206/Problems.md#3-generate-unique-permutations) |
 | 6 | Recursion and backtracking | [Build combinations with a target sum](Day%206/Problems.md#4-build-combinations-with-a-target-sum) |
 | 6 | Recursion and backtracking | [Search for a word in a grid](Day%206/Problems.md#5-search-for-a-word-in-a-grid) |
+| 7 | Searching and ordering | [Find a lower-bound insertion index](Day%207/Problems.md#1-find-a-lower-bound-insertion-index) |
 
 ## Run a solution
 
@@ -63,6 +64,7 @@ python -B -m unittest discover -s "Day 3" -v
 python -B -m unittest discover -s "Day 4" -v
 python -B -m unittest discover -s "Day 5" -v
 python -B -m unittest discover -s "Day 6" -v
+python -B -m unittest discover -s "Day 7" -v
 ```
 
 These suites cover the additional exercises listed above. Tests check boundary
