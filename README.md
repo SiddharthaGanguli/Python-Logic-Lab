@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **32**. Each includes requirements, expected examples,
+Additional exercises: **33**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -47,6 +47,7 @@ they do not impose a daily schedule.
 | 8 | Windows and dynamic programming | [Find the longest substring with distinct characters](Day%208/Problems.md#1-find-the-longest-substring-with-distinct-characters) |
 | 8 | Windows and dynamic programming | [Find the maximum sum of a fixed-size window](Day%208/Problems.md#2-find-the-maximum-sum-of-a-fixed-size-window) |
 | 8 | Windows and dynamic programming | [Make an amount with the fewest coins](Day%208/Problems.md#3-make-an-amount-with-the-fewest-coins) |
+| 8 | Windows and dynamic programming | [Find the longest strictly increasing subsequence](Day%208/Problems.md#4-find-the-longest-strictly-increasing-subsequence) |
 
 ## Run a solution
 

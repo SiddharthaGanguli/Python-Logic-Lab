@@ -99,3 +99,33 @@ For `k` denominations and amount `A`, a nonempty coin list takes O(k + A*k) time
 including validation, and O(A + 1) extra space. Empty coin lists return directly.
 
 [Solution](minimum_coin_change.py) · [Tests](test_minimum_coin_change.py)
+
+## 4. Find the longest strictly increasing subsequence
+
+Write `lis_length(numbers)` to return the length of the longest strictly increasing
+subsequence of a list of integers.
+
+### Requirements
+
+- A subsequence keeps the original index order but may skip elements; it need not be contiguous.
+- Values must increase strictly. Equal values cannot extend the subsequence.
+- Return `0` for empty input and leave the list unchanged.
+- Implement the O(n²) dynamic-programming approach with a length for each ending index.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `[10, 9, 2, 5, 3, 7, 101, 18]` | `4` |
+| `[1, 4, 2, 3]` | `3` |
+| `[1, 2, 2, 3]` | `3` |
+| `[7, 7, 7]` | `1` |
+| `[]` | `0` |
+
+### Approach and complexity
+
+Initialize every ending length to one. For each current index, consider earlier
+indices with smaller values and extend the best eligible subsequence. The largest
+ending length is the answer. For `n` values, time is O(n²) and extra space is O(n).
+
+[Solution](longest_increasing_subsequence.py) · [Tests](test_longest_increasing_subsequence.py)
