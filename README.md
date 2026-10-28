@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **34**. Each includes requirements, expected examples,
+Additional exercises: **35**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -49,6 +49,7 @@ they do not impose a daily schedule.
 | 8 | Windows and dynamic programming | [Make an amount with the fewest coins](Day%208/Problems.md#3-make-an-amount-with-the-fewest-coins) |
 | 8 | Windows and dynamic programming | [Find the longest strictly increasing subsequence](Day%208/Problems.md#4-find-the-longest-strictly-increasing-subsequence) |
 | 8 | Windows and dynamic programming | [Measure the edit distance between two strings](Day%208/Problems.md#5-measure-the-edit-distance-between-two-strings) |
+| 9 | Graphs and grid traversal | [Find a shortest route in an unweighted graph](Day%209/Problems.md#1-find-a-shortest-route-in-an-unweighted-graph) |
 
 ## Run a solution
 
@@ -74,6 +75,7 @@ python -B -m unittest discover -s "Day 5" -v
 python -B -m unittest discover -s "Day 6" -v
 python -B -m unittest discover -s "Day 7" -v
 python -B -m unittest discover -s "Day 8" -v
+python -B -m unittest discover -s "Day 9" -v
 ```
 
 These suites cover the additional exercises listed above. Tests check boundary
