@@ -112,3 +112,40 @@ The sorted copy and sorting workspace use O(n) auxiliary space; the output uses
 O(k) space for `k` merged intervals. Empty input returns in constant time.
 
 [Solution](merge_intervals.py) · [Tests](test_merge_intervals.py)
+
+## 4. Count inversions without changing the list
+
+Write `count_inversions(numbers)` to count index pairs `(i, j)` satisfying
+`i < j` and `numbers[i] > numbers[j]`. Use merge sort to avoid checking every
+pair individually.
+
+### Requirements
+
+- Accept a list of integers, including negative and repeated values.
+- Equal values are not inversions.
+- Empty and single-element inputs return `0`.
+- Preserve the original list and return the count as an integer.
+
+### Examples
+
+| Input | Output |
+|---|---|
+| `[2, 4, 1, 3, 5]` | `3` |
+| `[3, 2, 1]` | `3` |
+| `[2, 1, 2, 1]` | `3` |
+| `[7, 7, 7]` | `0` |
+| `[]` | `0` |
+
+### Approach and complexity
+
+Copy the list, recursively count each half's inversions, then merge the sorted
+halves. When the next right-side value is smaller than the next left-side value,
+it forms an inversion with every remaining left-side value. Add that remaining
+count at once. Choosing the left value when values are equal prevents duplicates
+from being counted.
+
+For `n` values, time is O(n log n) for `n >= 2`. The working copy and reusable
+merge buffer occupy O(n) space, and recursion adds O(log n) stack space. Overall
+auxiliary space is O(n). Inputs of length zero or one take constant time.
+
+[Solution](count_inversions.py) · [Tests](test_count_inversions.py)

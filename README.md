@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **28**. Each includes requirements, expected examples,
+Additional exercises: **29**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -43,6 +43,7 @@ they do not impose a daily schedule.
 | 7 | Searching and ordering | [Find a lower-bound insertion index](Day%207/Problems.md#1-find-a-lower-bound-insertion-index) |
 | 7 | Searching and ordering | [Search a rotated sorted list](Day%207/Problems.md#2-search-a-rotated-sorted-list) |
 | 7 | Searching and ordering | [Merge overlapping intervals](Day%207/Problems.md#3-merge-overlapping-intervals) |
+| 7 | Searching and ordering | [Count inversions without changing the list](Day%207/Problems.md#4-count-inversions-without-changing-the-list) |
 
 ## Run a solution
 
