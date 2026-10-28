@@ -112,3 +112,46 @@ O(n * P) for nonempty input. Auxiliary space is O(n + d), and recursion depth
 is at most n choices. Empty input takes constant time and space.
 
 [Solution](unique_permutations.py) · [Tests](test_unique_permutations.py)
+
+## 4. Build combinations with a target sum
+
+Write `combination_sum(candidates, target)` to return every unique combination
+of candidate values that sums to the target. A candidate may be reused.
+
+### Requirements
+
+- Candidates are positive integers and target is a nonnegative integer.
+- Raise `ValueError` for any nonpositive candidate or negative target. Check
+  candidates even when target is zero.
+- Ignore duplicate candidate values and preserve the original input.
+- Keep values inside each combination in nondecreasing order, and return the
+  combinations in lexicographic order with no duplicates.
+- Zero target returns `[[]]`; an unreachable positive target returns `[]`.
+
+### Examples
+
+| Candidates | Target | Expected output |
+|---|---:|---|
+| `[2, 3, 6, 7]` | `7` | `[[2, 2, 3], [7]]` |
+| `[5, 3, 2, 2]` | `8` | `[[2, 2, 2, 2], [2, 3, 3], [3, 5]]` |
+| `[2, 4]` | `3` | `[]` |
+| `[]` | `0` | `[[]]` |
+| `[0, 2]` | `0` | `ValueError` |
+
+### Approach and complexity
+
+Sort the distinct candidates. At each step, try values from the current index
+onward; recurse from the chosen index again to allow reuse. Stop trying larger
+values once a candidate exceeds the remaining target. Restricting future choices
+to the same or later index prevents rearrangements of one combination.
+
+For c supplied candidates and m distinct values, preprocessing takes expected
+O(c + m log m) time. Let V be the number of explored partial combinations and L
+the total number of integers in the returned combinations. The search takes
+O(m * V + L) time, an output-sensitive bound that can grow exponentially.
+For K results, output space is O(K + L). With nonempty candidates, at most
+`target // min(candidates)` choices can fit on a path; call this D. Auxiliary
+space is O(m + D), with at most D choices in the recursion. Empty candidates
+need only a constant-size search.
+
+[Solution](combination_sum.py) · [Tests](test_combination_sum.py)
