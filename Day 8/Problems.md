@@ -129,3 +129,37 @@ indices with smaller values and extend the best eligible subsequence. The larges
 ending length is the answer. For `n` values, time is O(n²) and extra space is O(n).
 
 [Solution](longest_increasing_subsequence.py) · [Tests](test_longest_increasing_subsequence.py)
+
+## 5. Measure the edit distance between two strings
+
+Write `edit_distance(first, second)` to return the minimum number of insertions,
+deletions, and substitutions required to transform the first string into the second.
+
+### Requirements
+
+- Each allowed operation costs one. Leaving an equal character unchanged costs zero.
+- Compare Unicode code points case-sensitively, without filtering or normalization.
+- Swapping adjacent characters is not a separate operation; `"ab"` to `"ba"` costs `2`.
+- An empty string requires one insertion or deletion per character of the other string.
+- Use rolling dynamic-programming rows instead of storing the full table.
+
+### Examples
+
+| First input | Second input | Expected output |
+|---|---|---|
+| `"kitten"` | `"sitting"` | `3` |
+| `"flaw"` | `"lawn"` | `2` |
+| `"cat"` | `"cart"` | `1` |
+| `"A"` | `"a"` | `1` |
+| `""` | `"abc"` | `3` |
+| `""` | `""` | `0` |
+
+### Approach and complexity
+
+For each pair of prefix lengths, choose the cheapest deletion, insertion, or
+substitution/match. Only the previous row and the current row are needed. Use the
+shorter string for the columns so rows stay small. For nonempty strings of lengths
+`m` and `n`, time is O(m*n), with O(min(m, n) + 1) extra space. Empty-input cases
+return a length directly in O(1) time.
+
+[Solution](edit_distance.py) · [Tests](test_edit_distance.py)
