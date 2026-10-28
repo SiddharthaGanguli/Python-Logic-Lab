@@ -155,3 +155,44 @@ space is O(m + D), with at most D choices in the recursion. Empty candidates
 need only a constant-size search.
 
 [Solution](combination_sum.py) · [Tests](test_combination_sum.py)
+
+## 5. Search for a word in a grid
+
+Write `word_exists(board, word)` to decide whether a word can be traced through
+adjacent cells of a character grid.
+
+### Requirements
+
+- `board` must be a rectangular list of lists, containing only single-character
+  strings. Invalid row structure, unequal row lengths, or invalid cells raise
+  `ValueError`, even when the word is empty.
+- Move only up, down, left, or right. Diagonal moves are not allowed.
+- Do not reuse a cell within one path, and match characters case-sensitively.
+- An empty word exists in every valid board. An empty board, including a
+  rectangular board with zero columns, cannot contain a nonempty word.
+- Preserve the board after successful and unsuccessful searches.
+
+### Examples
+
+| Board | Word | Expected output |
+|---|---|---|
+| `[["A", "B"], ["C", "D"]]` | `"ABD"` | `True` |
+| `[["A", "B"], ["C", "D"]]` | `"AD"` | `False` |
+| `[["A", "B"], ["X", "Y"]]` | `"ABA"` | `False` |
+| `[]` | `""` | `True` |
+| `[["A"], ["B", "C"]]` | `""` | `ValueError` |
+
+### Approach and complexity
+
+Validate the entire grid first. Try each cell as a starting point and recursively
+match the next character through unused orthogonal neighbors. Track visited
+coordinates in a set and remove them when leaving a branch; the board itself
+never needs to be edited. Reject words longer than the total cell count early.
+
+For r rows, c columns, and word length w, validation takes O(r + r*c) time.
+A loose search bound is O(r*c * 4**w), since each step has at most four
+directions before pruning. The visited set and recursion use
+O(min(w, r*c)) auxiliary space for nonempty searches. There is no growing
+output collection; the answer is a boolean.
+
+[Solution](word_search.py) · [Tests](test_word_search.py)
