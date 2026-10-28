@@ -66,3 +66,36 @@ and c columns, time is O(r + r*c), including validation of empty rows. The visit
 set and stack use O(r*c) auxiliary space.
 
 [Solution](count_islands.py) · [Tests](test_count_islands.py)
+
+## 3. Order tasks by their dependencies
+
+Write `topological_sort(graph)` for a directed graph where an edge `a -> b` means
+that `a` must appear before `b`.
+
+### Requirements
+
+- Include every string vertex found as a dictionary key or a neighbor.
+- Return the lexicographically smallest valid order by choosing the smallest
+  available vertex at every step.
+- Return `[]` for an empty graph. Repeated edges are permitted.
+- Raise `ValueError` for any directed cycle, including self-loops and cycles in
+  disconnected components. Preserve the input.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `{"shop": ["cook"], "cook": ["eat"]}` | `["shop", "cook", "eat"]` |
+| `{"b": ["d"], "a": ["c"]}` | `["a", "b", "c", "d"]` |
+| `{"a": ["b"], "b": ["a"]}` | `ValueError` |
+| `{}` | `[]` |
+
+### Approach and complexity
+
+Count each vertex's incoming edges and place all zero-indegree vertices in a
+min-heap. Remove the smallest, emit it, and reduce its neighbors' indegrees. If
+some vertices remain after the heap empties, the graph contains a cycle. Count
+and remove repeated edges consistently. Time is O(E + V*log(V + 1)), with O(V)
+auxiliary space and O(V) output space.
+
+[Solution](topological_sort.py) · [Tests](test_topological_sort.py)
