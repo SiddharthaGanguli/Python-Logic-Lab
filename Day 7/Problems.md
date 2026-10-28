@@ -39,3 +39,38 @@ For `n` values, time is O(log(n + 1)) and auxiliary space is O(1); no list copy
 is made. Empty input takes constant time.
 
 [Solution](lower_bound.py) · [Tests](test_lower_bound.py)
+
+## 2. Search a rotated sorted list
+
+Write `search_rotated(numbers, target)` to return the target's index, or `-1`
+when it is absent. Adapt binary search so each step discards half the remaining
+candidates, without slicing the input or finding the pivot by a linear scan.
+
+### Requirements
+
+- The input is a rotation of an ascending list of distinct integers.
+- An unrotated list is also valid. Duplicates are outside this exercise's contract.
+- Return `-1` for an empty list or missing target.
+- Preserve the input list; assume its rotation and uniqueness are valid.
+
+### Examples
+
+| Input | Output |
+|---|---|
+| `[4, 5, 6, 7, 0, 1, 2], 0` | `4` |
+| `[4, 5, 6, 7, 0, 1, 2], 3` | `-1` |
+| `[2, 1], 1` | `1` |
+| `[-5, 0, 8], -5` | `0` |
+| `[], 2` | `-1` |
+
+### Approach and complexity
+
+Check the middle value first. With distinct elements, at least one half is sorted.
+Use that half's endpoint values to decide whether it contains the target; keep
+that half or discard it accordingly. Continue until a match is found or the
+candidate interval is empty.
+
+For `n` values, time is O(log(n + 1)) and auxiliary space is O(1). The algorithm
+uses indices only and makes no copy. Empty input takes constant time.
+
+[Solution](search_rotated.py) · [Tests](test_search_rotated.py)
