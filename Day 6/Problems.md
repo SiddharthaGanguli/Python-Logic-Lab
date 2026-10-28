@@ -75,3 +75,40 @@ output space for n > 0; empty input takes constant time and space. The working
 path and recursion use O(n) auxiliary space, with at most n choices on a path.
 
 [Solution](subsets.py) · [Tests](test_subsets.py)
+
+## 3. Generate unique permutations
+
+Write `unique_permutations(numbers)` to return every distinct rearrangement of
+a list of integers, including lists that contain repeated values.
+
+### Requirements
+
+- Return each permutation once, with the result list in lexicographic order.
+- Keep the original input unchanged, even if it is unsorted.
+- Keep the same number of occurrences of every value in each result.
+- Return `[[]]` for empty input and independent lists for all results.
+- Avoid producing all repeated permutations and deduplicating them afterward.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `[2, 1, 1]` | `[[1, 1, 2], [1, 2, 1], [2, 1, 1]]` |
+| `[0, -1]` | `[[-1, 0], [0, -1]]` |
+| `[4, 4]` | `[[4, 4]]` |
+| `[]` | `[[]]` |
+
+### Approach and complexity
+
+Count each distinct value and consider those values in sorted order. Choose
+only values with a positive remaining count, decrement the count while exploring
+that choice, and restore it afterward. A full path becomes one permutation.
+
+Let n be the input length, d the distinct-value count, P the number of unique
+permutations, and V the number of visited partial paths. Building counts and
+sorting choices takes O(n + d log d). Traversal and result copying take
+O(d * V + n * P); for all-distinct inputs this is O(n * n!). Output space is
+O(n * P) for nonempty input. Auxiliary space is O(n + d), and recursion depth
+is at most n choices. Empty input takes constant time and space.
+
+[Solution](unique_permutations.py) · [Tests](test_unique_permutations.py)

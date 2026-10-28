@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **22**. Each includes requirements, expected examples,
+Additional exercises: **23**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -37,6 +37,7 @@ they do not impose a daily schedule.
 | 5 | Dictionaries, stacks, and structured data | [Count subarrays with a target sum](Day%205/Problems.md#5-count-subarrays-with-a-target-sum) |
 | 6 | Recursion and backtracking | [Generate balanced parentheses](Day%206/Problems.md#1-generate-balanced-parentheses) |
 | 6 | Recursion and backtracking | [Generate every subset](Day%206/Problems.md#2-generate-every-subset) |
+| 6 | Recursion and backtracking | [Generate unique permutations](Day%206/Problems.md#3-generate-unique-permutations) |
 
 ## Run a solution
 
