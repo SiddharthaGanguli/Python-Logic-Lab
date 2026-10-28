@@ -34,3 +34,35 @@ from the goal. For V reachable vertices and E outgoing edges, the worst-case wor
 is O(V + E), with O(V) auxiliary space and up to O(V) path output.
 
 [Solution](shortest_path.py) · [Tests](test_shortest_path.py)
+
+## 2. Count islands in a binary grid
+
+Write `count_islands(grid)` to count groups of land cells connected horizontally
+or vertically. Land is `1`; water is `0`.
+
+### Requirements
+
+- The input is a rectangular list of integer lists containing only 0 and 1.
+- Diagonal contact does not connect two islands.
+- Raise `ValueError` for unequal row lengths or a value other than 0 or 1.
+- Return `0` for empty or zero-column grids, and preserve all input cells.
+- Use an explicit stack or queue to avoid relying on recursion depth.
+
+### Examples
+
+| Input | Expected output |
+|---|---:|
+| `[[1, 1, 0], [0, 1, 0], [1, 0, 1]]` | `3` |
+| `[[1, 0], [0, 1]]` | `2` |
+| `[[1, 1], [1, 1]]` | `1` |
+| `[[], []]` | `0` |
+| `[[1], []]` | `ValueError` |
+
+### Approach and complexity
+
+Scan the grid. Each unvisited land cell starts one new island; traverse its land
+neighbors and record them as visited when adding them to the stack. For r rows
+and c columns, time is O(r + r*c), including validation of empty rows. The visited
+set and stack use O(r*c) auxiliary space.
+
+[Solution](count_islands.py) · [Tests](test_count_islands.py)

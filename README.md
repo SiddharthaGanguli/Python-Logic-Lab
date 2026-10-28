@@ -9,7 +9,7 @@ compare your approach with the reference solution.
 [Day 1](Day%201/Problems.md) contains the original list exercises: largest
 number, second-largest number, moving zeros, and removing sorted duplicates.
 
-Additional exercises: **35**. Each includes requirements, expected examples,
+Additional exercises: **36**. Each includes requirements, expected examples,
 an explained solution, and a separate test file. Day labels organize topics;
 they do not impose a daily schedule.
 
@@ -50,6 +50,7 @@ they do not impose a daily schedule.
 | 8 | Windows and dynamic programming | [Find the longest strictly increasing subsequence](Day%208/Problems.md#4-find-the-longest-strictly-increasing-subsequence) |
 | 8 | Windows and dynamic programming | [Measure the edit distance between two strings](Day%208/Problems.md#5-measure-the-edit-distance-between-two-strings) |
 | 9 | Graphs and grid traversal | [Find a shortest route in an unweighted graph](Day%209/Problems.md#1-find-a-shortest-route-in-an-unweighted-graph) |
+| 9 | Graphs and grid traversal | [Count islands in a binary grid](Day%209/Problems.md#2-count-islands-in-a-binary-grid) |
 
 ## Run a solution
 
