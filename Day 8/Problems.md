@@ -33,3 +33,33 @@ move that boundary backward for a duplicate already outside the window. For `n`
 characters and `u` distinct code points, expected time is O(n) and extra space is O(u).
 
 [Solution](longest_distinct_substring.py) · [Tests](test_longest_distinct_substring.py)
+
+## 2. Find the maximum sum of a fixed-size window
+
+Write `maximum_window_sum(numbers, size)` to return the largest sum of exactly
+`size` consecutive integers.
+
+### Requirements
+
+- `numbers` is a list of integers and `size` is an integer.
+- Raise `ValueError` if `size <= 0` or `size > len(numbers)`; an empty list has no valid window.
+- Negative values are allowed. A shorter or empty window is never a valid substitute.
+- Leave the input unchanged and solve the problem in one linear scan.
+
+### Examples
+
+| Input | Expected output |
+|---|---|
+| `maximum_window_sum([2, 1, 5, 1, 3, 2], 3)` | `9` |
+| `maximum_window_sum([-8, -3, -6, -2], 2)` | `-8` |
+| `maximum_window_sum([-4, 3, 1], 1)` | `3` |
+| `maximum_window_sum([-4, 3, 1], 3)` | `0` |
+| `maximum_window_sum([], 1)` | raises `ValueError` |
+
+### Approach and complexity
+
+Sum the first window and use it to initialize the best result, including for
+negative-only input. Each step subtracts the outgoing value and adds the incoming
+value. For `n` numbers, time is O(n) and extra space is O(1).
+
+[Solution](fixed_window_sum.py) · [Tests](test_fixed_window_sum.py)
